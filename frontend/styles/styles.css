@@ -9,10 +9,14 @@ body{
 }
 #container{
     display: flex;
-    flex-direction: column;
-    gap:10px;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-content: flex-start;
 }
 .card{
+    flex-basis: calc(30% - 2px);
     border: 1px solid black;
     padding:10px;
     display: flex;
