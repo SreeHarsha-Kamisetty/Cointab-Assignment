@@ -24,27 +24,28 @@
 
 ## Directory Structure
 .
-|-- README.md
-|-- backend
-|   |-- db.js
-|   |-- index.js
-|   |-- models
-|   |   |-- posts.model.js
-|   |   `-- users.model.js
-|   |-- package-lock.json
-|   |-- package.json
-|   `-- routes
-|       |-- posts.routes.js
-|       `-- users.routes.js
-`-- frontend
-    |-- index.html
-    |-- post.html
-    |-- scripts
-    |   |-- post.js
-    |   `-- script.js
-    `-- styles
-        |-- post.css
-        `-- styles.css
+├── README.md
+├── backend
+│   ├── db.js
+│   ├── index.js
+│   ├── models
+│   │   ├── posts.model.js
+│   │   └── users.model.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── routes
+│       ├── posts.routes.js
+│       └── users.routes.js
+└── frontend
+    ├── index.html
+    ├── post.html
+    ├── scripts
+    │   ├── post.js
+    │   └── script.js
+    └── styles
+        ├── post.css
+        └── styles.css
+
 
 
 ## API Endpoints:
