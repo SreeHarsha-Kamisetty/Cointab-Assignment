@@ -28,4 +28,5 @@
 
 
 ### Video walkthrough
-https://drive.google.com/file/d/1ApYk7O6FrDkftPOEQxWYYuinyqMEnOAl/view?usp=sharing
+https://github.com/SreeHarsha-Kamisetty/Cointab-Assignment/assets/146928943/d8ae3195-3139-4894-877a-4bc9dafe12d4
+
