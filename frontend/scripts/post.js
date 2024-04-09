@@ -27,6 +27,22 @@ async function getData(){
         let downloadBtn = document.createElement("button")
         downloadBtn.setAttribute("id","excel")
         downloadBtn.innerText="Download in excel"
+        downloadBtn.addEventListener("click",async ()=>{
+            try {
+                const response = await fetch(`${backendURL}/posts/download/${userId}`);
+                const blob = await response.blob();
+                const blobUrl = window.URL.createObjectURL(blob);
+            
+                const link = document.createElement('a');
+                link.href = blobUrl;
+                link.setAttribute('download', `posts_${userId}.xlsx`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              } catch (error) {
+                console.error('Error downloading file:', error);
+              }
+        })
         if(status_info == "not added"){
         container.append(bulkBtn)
         }
