@@ -1,29 +1,19 @@
 const express = require("express")
 const { User } = require("../models/users.model")
 const UserRouter = express.Router();
-
+const axios = require("axios")
 
 UserRouter.post("/",async (req,res)=>{
     try {
-        let {id,name,username,email,street,suite,city,zipcode,lat,lng,phone,website,company_name,catch_phrase,bs} = req.body
+        let {id,name,email,city,phone,website,company} = req.body
         const newUser = await User.create({
             id:id,
             name:name,
-            username:username,
             email:email,
-            street:street,
             city:city,
-            zipcode:zipcode,
-            suite:suite,
-            city:city,
-            lat:lat,
-            lng:lng,
             phone:phone,
             website:website,
-            company_name:company_name,
-            catch_phrase:catch_phrase,
-            bs:bs
-            
+            company:company,  
         })
 
         res.status(201).json(newUser)
@@ -33,5 +23,29 @@ UserRouter.post("/",async (req,res)=>{
     }
 })
 
+UserRouter.get("/",async (req,res)=>{
+    try {
+        let response = await axios("https://jsonplaceholder.typicode.com/users")
+        let originalData = response.data
+        console.log(originalData)
+        let userData = await User.findAll({attributes:['id']});
+        
+        userData = userData.map(item => item.id)
+        originalData = originalData.map(item => {
+            if(userData.includes(item.id)){
+                item.inDB = true;
+            }
+            else{
+                item.inDB = false;
+            }
+            return item
+        })
+       
+        res.status(200).json(originalData)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({Error:"Internal server error"})
+    }
+})
 
 module.exports = UserRouter

@@ -1,6 +1,7 @@
 const express = require("express")
 const cors = require("cors");
 const UserRouter = require("./routes/users.routes");
+const sequelize = require("./db");
 
 
 
@@ -15,6 +16,13 @@ app.get("/",(req,res)=>{
 
 
 
-app.listen(8080,()=>{
-    console.log("Server is running on port 8080")
+app.listen(8080,async()=>{
+    try {
+        await sequelize.authenticate();
+        console.log("connected to")
+        console.log("Server is running on port 8080")
+    } catch (error) {
+        console.log(error)
+    }
+    
 })

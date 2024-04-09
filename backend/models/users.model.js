@@ -10,33 +10,13 @@ const User = sequelize.define('User', {
         type:DataTypes.STRING,
         allowNull:false
     },
-    username:{
-        type:DataTypes.STRING,
-        unique:true,
-        allowNull:false
-    },
     email:{
         type:DataTypes.STRING,
         allowNull:false,
         unique:true
     },
-    street:{
-        type:DataTypes.STRING,
-    },
-    suite:{
-        type:DataTypes.STRING,
-    },
     city:{
         type:DataTypes.STRING,
-    },
-    zipcode:{
-        type:DataTypes.STRING,
-    },
-    lat:{
-        type:DataTypes.DECIMAL
-    },
-    lng:{
-        type:DataTypes.DECIMAL
     },
     phone:{
         type:DataTypes.STRING(40),
@@ -45,16 +25,10 @@ const User = sequelize.define('User', {
     website:{
         type:DataTypes.STRING,
     },
-    company_name:{
+    company:{
         type:DataTypes.STRING,
-    },
-    catch_phrase:
-    {
-        type:DataTypes.STRING,
-    },
-    bs:{
-        type:DataTypes.STRING,
-    },
+    }
+   
 },{
     timestamps:false,
 })
