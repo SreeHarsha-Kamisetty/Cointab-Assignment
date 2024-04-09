@@ -23,7 +23,7 @@
 - axios
 
 ## Directory Structure
-|-- README.md
+"|-- README.md
 |-- backend
 |   |-- db.js
 |   |-- index.js
@@ -45,7 +45,7 @@
     `-- styles
         |-- post.css
         `-- styles.css
-
+"
 
 
 ## API Endpoints:
