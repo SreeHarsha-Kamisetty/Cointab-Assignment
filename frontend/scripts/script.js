@@ -57,6 +57,12 @@ function createCard(item) {
   let openBtn = document.createElement("button");
   openBtn.className = "open";
   openBtn.innerText = "OPEN";
+  openBtn.addEventListener("click",()=>{
+    localStorage.setItem("userId",item.id);
+    localStorage.setItem("company", item.company.name)
+
+    window.location.href = "./post.html";
+  })
   card.append(id, name, email, city, phone, website, company);
   if (item.inDB) {
     card.append(openBtn);
