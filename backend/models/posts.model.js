@@ -16,6 +16,8 @@ const post = sequelize.define("Post", {
     body:{
         type:DataTypes.TEXT
     }
+},{
+    timestamps:false
 })
 
 module.exports = {

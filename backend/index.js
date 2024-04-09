@@ -2,6 +2,7 @@ const express = require("express")
 const cors = require("cors");
 const UserRouter = require("./routes/users.routes");
 const sequelize = require("./db");
+const { PostRouter } = require("./routes/posts.routes");
 
 
 
@@ -9,7 +10,8 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
-app.use("/users",UserRouter)
+app.use("/users",UserRouter);
+app.use("/posts",PostRouter);
 app.get("/",(req,res)=>{
     res.send("Home")
 })

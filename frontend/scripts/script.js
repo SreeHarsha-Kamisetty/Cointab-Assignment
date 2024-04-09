@@ -59,6 +59,7 @@ function createCard(item) {
   openBtn.innerText = "OPEN";
   openBtn.addEventListener("click",()=>{
     localStorage.setItem("userId",item.id);
+    localStorage.setItem("username",item.name)
     localStorage.setItem("company", item.company.name)
 
     window.location.href = "./post.html";
