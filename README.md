@@ -8,6 +8,9 @@
 ## Technologies used:
 - Nodejs
 - Expressjs
+- HTML
+- CSS
+- Javascript
 
 
 ## npm packages used:
