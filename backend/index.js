@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
 app.listen(8080,async()=>{
     try {
         await sequelize.authenticate();
-        console.log("connected to")
+        console.log("connected to Database")
         console.log("Server is running on port 8080")
     } catch (error) {
         console.log(error)
