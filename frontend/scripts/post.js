@@ -7,7 +7,7 @@ let u_name = document.getElementById("user");
 u_name.innerText=username
 let c_name = document.getElementById("company");
 c_name.innerText=company
-const backendURL = "http://localhost:8080"
+const backendURL = "https://cointab-assignment-uujp.onrender.com"
 let container = document.getElementById("container");
 async function getData(){
     try {

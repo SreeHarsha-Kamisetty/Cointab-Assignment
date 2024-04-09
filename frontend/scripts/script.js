@@ -3,11 +3,11 @@ const container = document.getElementById("container");
 allUsers.addEventListener("click", async () => {
   getData();
 });
-
+const backendURL = "https://cointab-assignment-uujp.onrender.com/"
 async function getData() {
   try {
     container.innerHTML = "";
-    let res = await fetch("http://localhost:8080/users/");
+    let res = await fetch(`${backendURL}users/`);
     let data = await res.json();
     console.log(data);
     data.forEach((element) => {
@@ -76,7 +76,7 @@ function createCard(item) {
 
 async function addData(item) {
   try {
-    let res = await fetch("http://localhost:8080/users/", {
+    let res = await fetch(`${backendURL}users/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
