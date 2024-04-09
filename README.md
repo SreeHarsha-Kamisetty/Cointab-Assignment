@@ -47,9 +47,23 @@
         `-- styles.css
 ```
 
+## Features
+- Add users to database
+- Add user's posts to database
+- Generate excel sheet with user's posts
+
 
 ## API Endpoints:
-
+- GET /users/
+  - This endpoint will list out all the users data
+- POST /users/
+  - This endpoint is used to add new user in database
+- GET /posts/
+  - This endpoint gives the list of posts for a particular user . We send the userId in query as userId={id}
+- POST /posts/
+   - This endpoint is used to store all the posts of a user
+ - GET /posts/download/:userId
+    - This endpoint is used to download all the posts of a user in an excel sheet
 
 
 ### Video walkthrough
