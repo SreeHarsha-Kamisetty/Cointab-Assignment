@@ -36,7 +36,6 @@
 |   `-- routes
 |       |-- posts.routes.js
 |       `-- users.routes.js
-|-- directory-structure.md
 `-- frontend
     |-- index.html
     |-- post.html
