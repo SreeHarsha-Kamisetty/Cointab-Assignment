@@ -1,15 +1,24 @@
 const allUsers = document.getElementById("allUsers");
 const container = document.getElementById("container");
 allUsers.addEventListener("click", async () => {
+  console.log("click")
+  
   getData();
 });
 const backendURL = "https://cointab-assignment-uujp.onrender.com/"
 async function getData() {
   try {
-    container.innerHTML = "";
+    let div = document.createElement("div");
+    div.style.textAlign = "center";
+    let loading = document.createElement("h1");
+  loading.innerText = "Getting data of all users ......";
+  div.append(loading);
+  
+  container.append(div);
+
     let res = await fetch(`${backendURL}users/`);
     let data = await res.json();
-    
+    container.innerHTML = "";
     data.forEach((element) => {
       let cards = createCard(element);
       container.append(cards);

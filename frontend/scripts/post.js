@@ -11,6 +11,13 @@ const backendURL = "https://cointab-assignment-uujp.onrender.com"
 let container = document.getElementById("container");
 async function getData(){
     try {
+        let div = document.createElement("div");
+    div.style.textAlign = "center";
+    let loading = document.createElement("h1");
+  loading.innerText = "Getting posts of the user......";
+  div.append(loading);
+  
+  container.append(div);
         let response = await fetch(`${backendURL}/posts?userId=${userId}`)
         let data = await response.json();
         let posts = data.data;
