@@ -27,7 +27,7 @@ UserRouter.get("/",async (req,res)=>{
     try {
         let response = await axios("https://jsonplaceholder.typicode.com/users")
         let originalData = response.data
-        console.log(originalData)
+        // console.log(originalData)
         let userData = await User.findAll({attributes:['id']});
         
         userData = userData.map(item => item.id)
