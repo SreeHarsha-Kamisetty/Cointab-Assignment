@@ -9,7 +9,7 @@ async function getData() {
     container.innerHTML = "";
     let res = await fetch(`${backendURL}users/`);
     let data = await res.json();
-    console.log(data);
+    
     data.forEach((element) => {
       let cards = createCard(element);
       container.append(cards);
@@ -30,7 +30,7 @@ function createCard(item) {
 
   let name = document.createElement("p");
   name.innerText = `Name: ${item.name}`;
-  // name.setAttribute("class", "name")
+  
 
   let email = document.createElement("p");
   email.innerText = `Email: ${item.email}`;
@@ -54,7 +54,7 @@ function createCard(item) {
     await addData(item);
     card.removeChild(addBtn);
     card.append(openBtn);
-    // getData();
+    
   });
   let openBtn = document.createElement("button");
   openBtn.className = "open";
@@ -94,7 +94,7 @@ async function addData(item) {
       }),
     });
     let data = await res.json();
-    console.log(data);
+    
   } catch (error) {
     console.log(error);
   }
