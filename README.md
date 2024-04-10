@@ -51,6 +51,10 @@
 - Add users to database
 - Add user's posts to database
 - Generate excel sheet with user's posts
+![image](https://github.com/SreeHarsha-Kamisetty/Art-Gallery/assets/146928943/1545302b-ebe8-4e59-8f8e-6a9fab80bf11)
+![image](https://github.com/SreeHarsha-Kamisetty/Cointab-Assignment/assets/146928943/756f70d7-d194-4d92-919e-e306b08f8af3)
+![image](https://github.com/SreeHarsha-Kamisetty/Cointab-Assignment/assets/146928943/74162159-171a-407f-b059-33ffeb507312)
+
 
 
 ## API Endpoints:
