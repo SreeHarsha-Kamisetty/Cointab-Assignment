@@ -50,9 +50,11 @@ function createCard(item) {
   let addBtn = document.createElement("button");
   addBtn.className = "add";
   addBtn.innerText = "ADD";
-  addBtn.addEventListener("click", () => {
-    addData(item);
-    getData();
+  addBtn.addEventListener("click", async() => {
+    await addData(item);
+    card.removeChild(addBtn);
+    card.append(openBtn);
+    // getData();
   });
   let openBtn = document.createElement("button");
   openBtn.className = "open";
