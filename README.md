@@ -70,6 +70,16 @@
     - This endpoint is used to download all the posts of a user in an excel sheet
 
 
-### Video walkthrough
-https://github.com/SreeHarsha-Kamisetty/Cointab-Assignment/assets/146928943/d8ae3195-3139-4894-877a-4bc9dafe12d4
 
+
+
+
+
+
+
+
+### Video walkthrough
+https://github.com/SreeHarsha-Kamisetty/Cointab-Assignment/assets/146928943/b6d1bdbc-cae6-4e32-bc9b-d36a87773262
+
+### Codebase walkthrough
+https://github.com/SreeHarsha-Kamisetty/Cointab-Assignment/assets/146928943/ef302f46-323d-4780-9f22-422e60c4d6c9
